@@ -33,7 +33,9 @@ public class CheckThenActTest {
 		thread2.start();
 		/**
 		 * Both were allowed to withdraw money since both checked balance >=100 check same time 
-		 * Suppose both found balance >=0 and entered inside if and Sougata withdrawn money and balance is 50 but
+		 * Suppose both found balance >=0 because even though Sougata entered if block but before it able to 
+		 * modify balance control switched to Sovon thread and entered inside if and again schudler went for Sougata
+		 *  withdrawn money and balance is now 50 but
 		 * since Sovon is also allowed it made the balance to 50-50 = 0
 		 */
 
